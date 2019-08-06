@@ -4,7 +4,7 @@ MAINTAINER Marko Hoffmann <klabehgge@gmail.com>
 # update apt repo
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
-    less vim wget unzip pico autossh
+    less vim wget unzip autossh
 
 # Fetch OpenLiteSpeed Repo
 RUN wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash
