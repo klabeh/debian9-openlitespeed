@@ -10,13 +10,10 @@ RUN apt-get update -y && \
 RUN wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash
 
 # Install OpenLiteSpeed
-RUN apt-get install openlitespeed
+RUN apt-get install -y openlitespeed
 
 # Install PHP 7.3 for OpenLiteSpeed
-RUN apt-get install \
-    lsphp73 lsphp73-common lsphp73-mysql lsphp73-gd lsphp73-process \
-    lsphp73-mbstring lsphp73-xml lsphp73-mcrypt lsphp73-pdo lsphp73-imap \
-    lsphp73-soap lsphp73-bcmath
+RUN apt-get install -y lsphp73
 
 RUN ln -sf /usr/local/lsws/lsphp73/bin/lsphp /usr/local/lsws/fcgi-bin/lsphp5
 
